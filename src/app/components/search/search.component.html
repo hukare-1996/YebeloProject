@@ -1,0 +1,19 @@
+<form novalidate [formGroup]="form">
+<h3>Select ...</h3>
+<div class="row">
+
+<div class="col-md-6">
+<input type="text" formControlName="Name" class="form-control" placeholder="Fruits Name" />
+</div>
+
+<div class="col-md-6 col-sm-6">
+<select ngDefaultControl class="form-control form-control-lg" formControlName="p_category">
+<option value=""> Select Category</option>
+<option [ngValue]="p_category" *ngFor="let p_category of levels">{{p_category}}</option>
+</select>
+</div>
+
+<div class="col-md-12 col-sm-12">
+<button class="btn btn-primary float-right" (click)="search(form.value)">Search</button>
+</div>
+</div>

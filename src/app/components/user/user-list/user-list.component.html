@@ -1,0 +1,24 @@
+<table class="table table-responsive">
+<tr>
+<th>Name</th>
+<th>Cost(Kg)</th>
+<th>Category</th>
+<th>Available</th>
+<th>Details</th>
+<th>Images</th>
+</tr>
+<tbody>
+<tr *ngFor="let user of filteredUsers | filter: searchByKeyword: 'name'">
+<td>{{ user.p_Name}}</td>
+<td>{{ user.p_cost}}</td>
+<td>{{ user.p_category}}</td>
+<td>{{ user.p_availability}}</td>
+<td>{{ user.p_details}}</td>
+
+<td><img src="{{user.image}}" > </td>
+
+
+</tr>
+</tbody>
+</table>
+
